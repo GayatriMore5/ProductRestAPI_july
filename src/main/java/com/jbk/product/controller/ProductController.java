@@ -20,6 +20,7 @@ public class ProductController {
 	@PostMapping(value ="/saveProduct")
 	public ResponseEntity<Boolean> saveProduct(@RequestBody Product product ){
 		boolean isAdded = service.saveProduct(product);
+		System.out.println("Hello Gayatri");
 		if(isAdded) {
 			return new ResponseEntity<Boolean>(isAdded, HttpStatus.CREATED);
 		}else {
